@@ -1,7 +1,13 @@
 <script setup></script>
 
 <template>
-  <v-card height="600px" class="main mt-3 mb-3" color="#CDF7CD">
+  <v-card
+    elevation="10"
+    rounded="14"
+    height="600px"
+    class="main mt-3 mb-3"
+    color="#CDF7CD"
+  >
     <v-card color="#F2E3D8" class="trapezoid1 d-flex">
       <div class="name">
         <h3>Hello, I am</h3>
@@ -36,7 +42,6 @@
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
   font-style: normal;
-
 }
 .slogan {
   position: inherit;

@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <v-card>
+  <v-card id="education">
     <v-card
       elevation="23"
       color="transparent"

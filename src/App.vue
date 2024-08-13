@@ -8,7 +8,7 @@ import Projects from "./components/Projects.vue";
 </script>
 
 <template>
-  <div class="main">
+  <div class="main1">
     <Header></Header>
     <Main></Main>
     <Education></Education>
@@ -17,8 +17,11 @@ import Projects from "./components/Projects.vue";
   </div>
 </template>
 
-<style scoped>
-.main {
+<style>
+html {
+  scroll-behavior: smooth;
+}
+.main1 {
   max-width: 1200px;
   margin: 0 auto;
   background-color: #ededed;
