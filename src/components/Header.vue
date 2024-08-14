@@ -19,7 +19,7 @@ const scrollTo = (index) => {
       <v-btn @click="scrollTo(1)">Education</v-btn>
       <v-btn @click="scrollTo(1)">Projects</v-btn>
       <v-btn @click="scrollTo(1)">Quantities</v-btn>
-      <v-btn @click="scrollTo(1)"> Certificates</v-btn>
+      <v-btn @click="scrollTo(1)">Certificates</v-btn>
       <v-btn @click="scrollTo(1)">Cources</v-btn>
       <v-btn @click="scrollTo(1)">Github</v-btn>
       <v-spacer></v-spacer>

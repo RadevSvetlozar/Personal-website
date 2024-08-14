@@ -5,6 +5,7 @@ import Main from "./components/Main.vue";
 import Education from "./components/Education.vue";
 import Quantities from "./components/Quantities.vue";
 import Projects from "./components/Projects.vue";
+import Certificates from "./components/Certificates.vue";
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import Projects from "./components/Projects.vue";
     <Main></Main>
     <Education></Education>
     <Quantities></Quantities>
+    <Certificates></Certificates>
     <Projects></Projects>
   </div>
 </template>
