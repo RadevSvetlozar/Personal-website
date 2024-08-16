@@ -7,7 +7,7 @@
       color="transparent"
       style="margin: auto"
       width="800px"
-      height="840px"
+      height="100vh"
     >
       <svg width="100%" height="850px">
         <line x1="280" y1="50" x2="550" y2="100" stroke="black" />

@@ -1,11 +1,12 @@
 <script setup>
-import HelloWorld from "./components/HelloWorld.vue";
+
 import Header from "./components/Header.vue";
-import Main from "./components/Main.vue";
-import Education from "./components/Education.vue";
-import Quantities from "./components/Quantities.vue";
-import Projects from "./components/Projects.vue";
-import Certificates from "./components/Certificates.vue";
+import Footer from "./components/Footer.vue";
+import Main from "./views/Main.vue";
+import Education from "./views/Education.vue";
+import Quantities from "./views/Quantities.vue";
+import Projects from "./views/Projects.vue";
+import Certificates from "./views/Certificates.vue";
 </script>
 
 <template>
@@ -16,6 +17,7 @@ import Certificates from "./components/Certificates.vue";
     <Quantities></Quantities>
     <Certificates></Certificates>
     <Projects></Projects>
+    <Footer></Footer>
   </div>
 </template>
 

@@ -2,9 +2,10 @@
 
 <template>
   <v-card
+    id="main"
     elevation="10"
     rounded="14"
-    height="600px"
+    height="70vh"
     class="main mt-3 mb-3"
     color="#CDF7CD"
   >
@@ -29,7 +30,19 @@
       </div>
     </v-card>
 
-    <v-icon class="icon">mdi-monitor-dashboard</v-icon>
+    <v-icon class="icon" style="left: 480px; top: 15px; font-size: 100px"
+      >mdi-monitor-dashboard</v-icon
+    >
+    <v-icon
+      class="icon"
+      style="
+        font-size: 200px;
+        right: 300px;
+        bottom: 15px;
+        transform: rotate(0.05turn);
+      "
+      >mdi-card-account-details-outline</v-icon
+    >
   </v-card>
 </template>
 
@@ -53,11 +66,9 @@
   font-size: x-large;
 }
 .icon {
-  font-size: 100px;
   transform: rotate(-0.05turn);
   position: absolute;
-  left: 480px;
-  top: 15px;
+
   color: silver;
   opacity: 0.5;
 }

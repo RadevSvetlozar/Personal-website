@@ -1,6 +1,5 @@
 <script setup>
 import { reactive, ref } from "vue";
-
 const certificates = reactive([
   {
     text: "Programming Basics with C# - October 2019",
@@ -32,7 +31,6 @@ const certificates = reactive([
     link: "../assets/oop.jpg",
     icon: "mdi-language-csharp",
   },
-
   {
     text: "C# Web Basics - September 2020",
     link: "../assets/web_basics.jpg",
@@ -49,25 +47,21 @@ const certificates = reactive([
     icon: "mdi-language-csharp",
   },
 ]);
-
 const cources = reactive([
   {
     text: "WPF Essentials",
     link: "../assets/basic.jpg",
     icon: "mdi-language-csharp",
   },
-  {
-    text: "VueJS",
-    link: "../assets/basic.jpg",
-    icon: "mdi-vuejs",
-  },
+  { text: "VueJS", link: "../assets/basic.jpg", icon: "mdi-vuejs" },
+  { text: "Angular", link: "../assets/basic.jpg", icon: "mdi-angular" },
+  { text: "ExpressJS", link: "../assets/basic.jpg", icon: "mdi-nodejs" },
   {
     text: "HTML & CSS",
     link: "../assets/basic.jpg",
     icon: "mdi-language-html5",
   },
 ]);
-
 const getImage = (link) => {
   return new URL(link, import.meta.url).href;
 };
@@ -82,15 +76,20 @@ const clickOnItem = (text) => {
   }
 };
 </script>
-
 <template>
   <v-card
+    id="certificates"
     elevation="15"
     color="#CDF7CD"
     rounded="14"
-    height="800px"
+    height="100vh"
     class="main mt-3 mb-3"
   >
+    <v-icon
+      class="icon"
+      style="left: 510px; bottom: 150px; transform: rotate(0.05turn)"
+      >mdi-folder-text-outline</v-icon
+    >
     <v-row>
       <v-col cols="6">
         <v-card elevation="24" class="ma-10" rounded>
@@ -107,7 +106,6 @@ const clickOnItem = (text) => {
               <template v-slot:prepend>
                 <v-icon :icon="certificate.icon"></v-icon>
               </template>
-
               <v-list-item-title v-text="certificate.text"></v-list-item-title>
             </v-list-item>
           </v-list>
@@ -125,7 +123,6 @@ const clickOnItem = (text) => {
               <template v-slot:prepend>
                 <v-icon :icon="course.icon"></v-icon>
               </template>
-
               <v-list-item-title v-text="course.text"></v-list-item-title>
             </v-list-item>
           </v-list>
@@ -138,10 +135,7 @@ const clickOnItem = (text) => {
             :key="i"
             elevation="20"
             class="img border"
-            :style="{
-              left: i * 20 + 'px',
-              top: i * 20 + 'px',
-            }"
+            :style="{ left: i * 20 + 'px', top: i * 20 + 'px' }"
             :id="certificate.text"
           >
             <v-img :src="getImage(certificate.link)" cover></v-img>
@@ -151,7 +145,6 @@ const clickOnItem = (text) => {
     </v-row>
   </v-card>
 </template>
-
 <style scoped>
 .img-container {
   position: relative;
@@ -163,14 +156,20 @@ const clickOnItem = (text) => {
   height: 500px;
   width: 350px;
 }
-
 .img:hover {
   z-index: 15;
 }
-
 h1 {
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+.icon {
+  font-size: 150px;
+  transform: rotate(-0.07turn) ;
+  position: absolute;
+  
+  color: silver;
+  opacity: 0.6;
 }
 </style>
