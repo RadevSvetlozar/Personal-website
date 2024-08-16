@@ -9,7 +9,7 @@ const getImage = (link) => {
     id="projects"
     elevation="15"
     rounded="14"
-    height="100vh"
+    height="auto"
     class="main mt-3 mb-3"
   >
     <v-icon
@@ -21,7 +21,7 @@ const getImage = (link) => {
       <v-col cols="auto"> <h1 class="pt-5">Projects</h1></v-col>
     </v-row>
 
-    <v-row class="d-flex justify-center">
+    <v-row class="d-flex justify-center align-center">
       <v-col cols="5">
         <v-card
           elevation="24"
@@ -47,7 +47,7 @@ const getImage = (link) => {
         vertical
       ></v-divider>
       <v-col cols="5">
-        <v-card elevation="24" class="ma-10" height="250px">
+        <v-card elevation="24" class="ma-10" height="auto">
           <v-img
             cover
             src="https://bootstrapmade.com/content/templatefiles/Impact/Impact-bootstrap-website-template-md.webp"
@@ -55,9 +55,9 @@ const getImage = (link) => {
         </v-card>
       </v-col>
     </v-row>
-    <v-row class="mt-10 d-flex justify-center">
+    <v-row class="mt-10 d-flex justify-center align-center">
       <v-col cols="5">
-        <v-card elevation="24" class="ma-10" height="250px">
+        <v-card elevation="24" class="ma-10" height="auto">
           <v-img cover :src="getImage('../assets/barber.png')" />
         </v-card>
       </v-col>
@@ -83,6 +83,37 @@ const getImage = (link) => {
               >Barbershop website with booking</v-card-subtite
             >
           </div>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row class="mt-10 d-flex justify-center align-center">
+      <v-col cols="5">
+        <v-card
+          elevation="24"
+          color="#F2E3D8"
+          class="ma-10 d-flex align-center"
+          height="250px"
+        >
+          <div>
+            <v-card-title>
+              <h3>Shopping list app</h3>
+            </v-card-title>
+            <v-card-subtite class="pa-2"
+              >Progressive web app in which a person can add to a list the
+              products needed for purchase</v-card-subtite
+            >
+          </div>
+        </v-card>
+      </v-col>
+      <v-divider
+        :thickness="2"
+        class="mt-5 border-opacity-100"
+        color="#8c705a"
+        vertical
+      ></v-divider>
+      <v-col cols="5">
+        <v-card elevation="24" class="ma-10" height="auto">
+          <v-img cover :src="getImage('../assets/shopping-list-app.png')" />
         </v-card>
       </v-col>
     </v-row>
