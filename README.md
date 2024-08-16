@@ -1,5 +1,9 @@
-# Vue 3 + Vite
+<h1 align="center">Hi 👋, I'm Svetlozar Radev</h1>
+<h3 align="center">This website is a personal business card that contains how I managed to become a full-stack developer. Contains my successes expressed in certificates and projects. The site is built with vuejs 3 and Vite.</h3>
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+<h3 align="left">Link to my website: https://svetlozarradev.com/</h3>
+<p align="left">
+</p>
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+<h3 align="left">Languages and Tools:</h3>
+<p align="left"> <a href="https://vuejs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original-wordmark.svg" alt="vuejs" width="40" height="40"/> </a> <a href="https://vuetifyjs.com/en/" target="_blank" rel="noreferrer"> <img src="https://bestofjs.org/logos/vuetify.svg" alt="vuetify" width="40" height="40"/> </a> </p>
