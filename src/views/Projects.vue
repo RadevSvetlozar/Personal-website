@@ -1,4 +1,6 @@
 <script setup>
+import barber from "../assets/barber.png"; // => or relative path
+import shopping from "../assets/shopping-list-app.png"; // => or relative path
 const getImage = (link) => {
   return new URL(link, import.meta.url).href;
 };
@@ -10,6 +12,7 @@ const getImage = (link) => {
     elevation="15"
     rounded="14"
     height="auto"
+    max-height="700px"
     class="main mt-3 mb-3"
   >
     <v-icon
@@ -58,7 +61,7 @@ const getImage = (link) => {
     <v-row class="mt-10 d-flex justify-center align-center">
       <v-col cols="5">
         <v-card elevation="24" class="ma-10" height="auto">
-          <v-img cover :src="getImage('../assets/barber.png')" />
+          <v-img cover :src="barber" />
         </v-card>
       </v-col>
       <v-divider
@@ -113,7 +116,7 @@ const getImage = (link) => {
       ></v-divider>
       <v-col cols="5">
         <v-card elevation="24" class="ma-10" height="auto">
-          <v-img cover :src="getImage('../assets/shopping-list-app.png')" />
+          <v-img cover :src="shopping" />
         </v-card>
       </v-col>
     </v-row>

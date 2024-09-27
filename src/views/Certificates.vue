@@ -3,68 +3,67 @@ import { reactive, ref } from "vue";
 const certificates = reactive([
   {
     text: "Programming Basics with C# - October 2019",
-    link: "../assets/basic.jpg",
+    link: "basic.jpg",
     icon: "mdi-language-csharp",
   },
   {
     text: "C# Fundamentals - January 2020",
-    link: "../assets/fundamental.jpg",
+    link: "fundamental.jpg",
     icon: "mdi-language-csharp",
   },
   {
     text: "Databases Basics - MS SQL Server - May 2020",
-    link: "../assets/database_basic.jpg",
+    link: "database_basic.jpg",
     icon: "mdi-language-csharp",
   },
   {
     text: "C# Advanced - May 2020",
-    link: "../assets/advanced.jpg",
+    link: "advanced.jpg",
     icon: "mdi-language-csharp",
   },
   {
     text: "Entity Framework Core - June 2020",
-    link: "../assets/EFjpg.jpg",
+    link: "EFjpg.jpg",
     icon: "mdi-language-csharp",
   },
   {
     text: "C# OOP - June 2020",
-    link: "../assets/oop.jpg",
+    link: "oop.jpg",
     icon: "mdi-language-csharp",
   },
   {
     text: "C# Web Basics - September 2020",
-    link: "../assets/web_basics.jpg",
+    link: "web_basics.jpg",
     icon: "mdi-language-csharp",
   },
   {
     text: "ASP.NET Core - October 2020",
-    link: "../assets/asp.jpg",
+    link: "asp.jpg",
     icon: "mdi-language-csharp",
   },
   {
     text: "JS Advanced - January 2021",
-    link: "../assets/js_advanved.jpg",
+    link: "js_advanved.jpg",
     icon: "mdi-language-csharp",
   },
 ]);
 const cources = reactive([
   {
     text: "WPF Essentials",
-    link: "../assets/basic.jpg",
+    link: "basic.jpg",
     icon: "mdi-language-csharp",
   },
-  { text: "VueJS", link: "../assets/basic.jpg", icon: "mdi-vuejs" },
-  { text: "Angular", link: "../assets/basic.jpg", icon: "mdi-angular" },
-  { text: "ExpressJS", link: "../assets/basic.jpg", icon: "mdi-nodejs" },
+  { text: "VueJS", link: "basic.jpg", icon: "mdi-vuejs" },
+  { text: "Angular", link: "basic.jpg", icon: "mdi-angular" },
+  { text: "ExpressJS", link: "basic.jpg", icon: "mdi-nodejs" },
   {
     text: "HTML & CSS",
-    link: "../assets/basic.jpg",
+    link: "basic.jpg",
     icon: "mdi-language-html5",
   },
 ]);
-const getImage = (link) => {
-  return new URL(link, import.meta.url).href;
-};
+const getImgUrl = (imageNameWithExtension) =>
+  new URL(`../assets/${imageNameWithExtension}`, import.meta.url).href;
 const selectedCertificateLink = ref(certificates[0].link);
 const clickOnItem = (text) => {
   for (const certificate of certificates) {
@@ -83,6 +82,7 @@ const clickOnItem = (text) => {
     color="#CDF7CD"
     rounded="14"
     height="100vh"
+      max-height="700px"
     class="main mt-3 mb-3"
   >
     <v-icon
@@ -138,7 +138,10 @@ const clickOnItem = (text) => {
             :style="{ left: i * 20 + 'px', top: i * 20 + 'px' }"
             :id="certificate.text"
           >
-            <v-img :src="getImage(certificate.link)" cover></v-img>
+            <v-img
+              :src="getImgUrl(certificate.link)"
+              cover
+            ></v-img>
           </v-card>
         </div>
       </v-col>
@@ -166,9 +169,9 @@ h1 {
 }
 .icon {
   font-size: 150px;
-  transform: rotate(-0.07turn) ;
+  transform: rotate(-0.07turn);
   position: absolute;
-  
+
   color: silver;
   opacity: 0.6;
 }

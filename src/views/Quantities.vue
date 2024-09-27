@@ -8,6 +8,7 @@
     color="transparent"
     style="margin: auto"
     width="100%"
+    max-height="700px"
     height="840px"
   >
     <v-card

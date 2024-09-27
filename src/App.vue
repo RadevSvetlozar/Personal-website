@@ -1,5 +1,4 @@
 <script setup>
-
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Main from "./views/Main.vue";
@@ -10,15 +9,17 @@ import Certificates from "./views/Certificates.vue";
 </script>
 
 <template>
-  <div class="main1">
-    <Header></Header>
-    <Main></Main>
-    <Education></Education>
-    <Quantities></Quantities>
-    <Certificates></Certificates>
-    <Projects></Projects>
-    <Footer></Footer>
-  </div>
+  <v-app>
+    <div class="main1">
+      <Header></Header>
+      <Main></Main>
+      <Education></Education>
+      <Quantities></Quantities>
+      <Certificates></Certificates>
+      <Projects></Projects>
+      <Footer></Footer>
+    </div>
+  </v-app>
 </template>
 
 <style>

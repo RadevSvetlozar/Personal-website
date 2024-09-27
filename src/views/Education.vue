@@ -7,6 +7,7 @@
       color="transparent"
       style="margin: auto"
       width="800px"
+        max-height="700px"
       height="100vh"
     >
       <svg width="100%" height="850px">
@@ -27,14 +28,14 @@
       </span>
 
       <span class="dot basic">
-        <h3>Basic</h3>
+        <h3>Primary</h3>
         <h3>Education</h3>
         <v-icon color="yellow">mdi-book-open-blank-variant-outline</v-icon>
-        <h4>2009</h4>
+        <h4>2004</h4>
       </span>
 
       <span class="dot average">
-        <h3>Everage</h3>
+        <h3>Higher</h3>
         <h3>Education</h3>
         <v-icon color="purple">mdi-cast-education</v-icon>
         <h4>2013</h4>

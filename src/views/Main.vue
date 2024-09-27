@@ -6,28 +6,50 @@
     elevation="10"
     rounded="14"
     height="70vh"
-    class="main mt-3 mb-3"
+    max-height="700px"
+    class="mt-3 mb-3"
     color="#CDF7CD"
   >
-    <v-card color="#F2E3D8" class="trapezoid1 d-flex">
-      <div class="name">
+    <div class="d-none d-sm-flex">
+      <v-card color="#F2E3D8" class="trapezoid1 d-flex">
+        <div class="name" style="top: 150px; right: 30%">
+          <h3>Hello, I am</h3>
+          <h1>Svetlozar Radev</h1>
+          <h3>Full-Stack Developer</h3>
+        </div>
+
+        <v-img
+          class="image"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8HrGomjMzPa4p16svxviHG6hpdrrJ8YyYjw&s"
+        >
+        </v-img>
+      </v-card>
+
+      <v-card color="#F2E3D8" class="trapezoid2"
+        ><div class="slogan">
+          <h3>Work hard,</h3>
+          <h3>Play hard</h3>
+        </div>
+      </v-card>
+    </div>
+
+    <v-card
+      color="#F2E3D8"
+      width="100%"
+      height="400px"
+      class="d-flex justify-center align-center"
+    >
+      <v-card>
         <h3>Hello, I am</h3>
         <h1>Svetlozar Radev</h1>
         <h3>Full-Stack Developer</h3>
-      </div>
 
-      <v-img
-        class="image"
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8HrGomjMzPa4p16svxviHG6hpdrrJ8YyYjw&s"
-      >
-      </v-img>
-    </v-card>
-
-    <v-card color="#F2E3D8" class="trapezoid2"
-      ><div class="slogan">
-        <h3>Work hard,</h3>
-        <h3>Play hard</h3>
-      </div>
+        <v-img
+          width="100px"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8HrGomjMzPa4p16svxviHG6hpdrrJ8YyYjw&s"
+        >
+        </v-img>
+      </v-card>
     </v-card>
 
     <v-icon class="icon" style="left: 480px; top: 15px; font-size: 100px"
@@ -47,10 +69,13 @@
 </template>
 
 <style scoped>
+.font-style {
+  font-family: "New Amsterdam", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 .name {
   position: absolute;
-  top: 150px;
-  right: 410px;
 
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
@@ -58,12 +83,12 @@
 }
 .slogan {
   position: inherit;
-  left: 130px;
+  left: 100px;
   top: 125px;
   font-family: "Pacifico", cursive;
   font-weight: 400;
   font-style: normal;
-  font-size: x-large;
+  font-size: large;
 }
 .icon {
   transform: rotate(-0.05turn);
@@ -72,9 +97,7 @@
   color: silver;
   opacity: 0.5;
 }
-.main {
-  position: relative;
-}
+
 .trapezoid1 {
   height: 500px;
   width: 100%;
@@ -101,6 +124,11 @@
     0% 35%,
     20% 10%
   );
+}
+.image1 {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
 }
 
 .trapezoid2 {
