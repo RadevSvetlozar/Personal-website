@@ -10,8 +10,8 @@ const scrollTo = (index) => {
 </script>
 <template>
   <div
-    style="height: 150px; background-color: #cdf7cd"
-    class="d-flex align-center"
+    style="height: 150px; "
+    class="d-flex align-center main"
   >
     <v-row class="d-flex justify-center">
       <v-col class="d-flex-column align-start" cols="5"
@@ -28,9 +28,14 @@ const scrollTo = (index) => {
 </template>
 
 <style scoped>
+.main{
+  background: rgb(207,241,181);
+  background: linear-gradient(90deg, rgba(207,241,181,1) 0%, rgba(173,206,132,1) 46%, rgba(207,241,181,1) 95%);
+}
 h2, h4 {
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
   font-style: normal;
+  color: rgba(88,91,136);
 }
 </style>

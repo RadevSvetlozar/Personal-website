@@ -1,4 +1,20 @@
-<script setup></script>
+<script setup>
+import {computed} from 'vue'
+import { useDisplay } from "vuetify";
+const display = useDisplay();
+console.log(display.lgAndUp)
+
+const lgAndUp = computed(() => {
+  return display.lgAndUp
+})
+
+const image = computed(() => {
+  return new URL(
+          `../assets/profile.jpg`,
+          import.meta.url
+        ).href;
+})
+</script>
 
 <template>
   <v-card
@@ -7,11 +23,12 @@
     rounded="14"
     height="70vh"
     max-height="700px"
-    class="mt-3 mb-3"
-    color="#CDF7CD"
+    class="mt-3 mb-3 main"
+  
   >
-    <div class="d-none d-sm-flex">
-      <v-card color="#F2E3D8" class="trapezoid1 d-flex">
+  
+    <div class="d-none d-md-flex">
+      <v-card  class="trapezoid1 d-flex">
         <div class="name" style="top: 150px; right: 30%">
           <h3>Hello, I am</h3>
           <h1>Svetlozar Radev</h1>
@@ -20,38 +37,44 @@
 
         <v-img
           class="image"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8HrGomjMzPa4p16svxviHG6hpdrrJ8YyYjw&s"
+           style="top: 150px; right: 3%"
+             :src="image"
         >
         </v-img>
       </v-card>
 
       <v-card color="#F2E3D8" class="trapezoid2"
         ><div class="slogan">
-          <h3>Work hard,</h3>
-          <h3>Play hard</h3>
+          <h4>Work hard,</h4>
+          <h4>Play hard</h4>
         </div>
       </v-card>
     </div>
-
-    <v-card
-      color="#F2E3D8"
-      width="100%"
-      height="400px"
-      class="d-flex justify-center align-center"
-    >
-      <v-card>
-        <h3>Hello, I am</h3>
-        <h1>Svetlozar Radev</h1>
-        <h3>Full-Stack Developer</h3>
-
-        <v-img
-          width="100px"
-          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8HrGomjMzPa4p16svxviHG6hpdrrJ8YyYjw&s"
-        >
-        </v-img>
+    <div class="d-sm-flex d-md-none">
+      <v-card
+      
+        width="100%"
+        height="400px"
+        class="mobile d-flex justify-center align-center"
+      >
+        <v-row class="ma-10">
+          <v-col cols="12"
+            ><h3 class="font-style">Hello, I am</h3>
+            <h1 class="font-style">Svetlozar Radev</h1>
+            <h3 class="font-style">Full-Stack Developer</h3></v-col
+          >
+          <v-col cols="12">
+            <v-avatar size="80%">
+              <v-img
+                width="100px"
+              :src="image"
+              >
+              </v-img>
+            </v-avatar>
+          </v-col>
+        </v-row>
       </v-card>
-    </v-card>
-
+    </div>
     <v-icon class="icon" style="left: 480px; top: 15px; font-size: 100px"
       >mdi-monitor-dashboard</v-icon
     >
@@ -69,6 +92,14 @@
 </template>
 
 <style scoped>
+.main{
+  background: rgb(207,241,181);
+background: linear-gradient(90deg, rgba(207,241,181,1) 0%, rgba(173,206,132,1) 46%, rgba(207,241,181,1) 95%);
+}
+.mobile{
+  background: rgb(222,226,252);
+background: radial-gradient(circle, rgba(222,226,252,1) 0%, rgba(88,91,136,0.5550814075630253) 98%);
+}
 .font-style {
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
@@ -99,6 +130,8 @@
 }
 
 .trapezoid1 {
+  background: rgb(222,226,252);
+  background: radial-gradient(circle, rgba(222,226,252,1) 0%, rgba(88,91,136,0.5550814075630253) 98%);
   height: 500px;
   width: 100%;
   position: absolute;
@@ -132,6 +165,8 @@
 }
 
 .trapezoid2 {
+  background: rgb(222,226,252);
+background: radial-gradient(circle, rgba(222,226,252,1) 0%, rgba(88,91,136,0.5550814075630253) 98%);
   height: 500px;
   position: absolute;
   z-index: 2;

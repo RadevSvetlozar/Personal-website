@@ -13,10 +13,11 @@
   >
     <v-card
       width="80%"
-      color="#CDF7CD"
+   class="main"
       rounded
       elevation="20"
       style="margin: 30px auto"
+      
     >
       <v-icon class="icon" style="right: 480px; top: 15px"
         >mdi-code-json</v-icon
@@ -29,7 +30,7 @@
       >
 
       <v-row>
-        <v-col cols="6" class="d-flex justify-center align-center">
+        <v-col cols="12" md="6" class="d-flex justify-center align-center">
           <div>
             <h2 class="ml-10">Quantities</h2>
             <ul>
@@ -49,22 +50,19 @@
                 <v-icon> mdi-star-shooting-outline</v-icon>
                 <h2 class="ml-2">Motivation</h2>
               </li>
-              <li class="d-flex">
-                <v-icon> mdi-lock</v-icon>
-                <h2 class="ml-2">Loyalty</h2>
-              </li>
+            
             </ul>
           </div>
         </v-col>
-        <v-divider
+        <!-- <v-divider
           :thickness="2"
           class="mt-5 border-opacity-100"
           color="#8c705a"
           vertical
-        ></v-divider>
-        <v-col cols="auto" class="d-flex justify-center align-center">
+        ></v-divider> -->
+        <v-col cols="12" md="6" class="d-flex justify-center align-center">
           <div>
-            <h2 class="ml-10">Technologies</h2>
+            <h2 class="ml-6">Technologies</h2>
             <ul>
               <li class="d-flex">
                 <v-icon> mdi-language-csharp</v-icon>
@@ -153,18 +151,22 @@
 </template>
 
 <style scoped>
+.main{
+  background: rgb(207,241,181);
+  background: linear-gradient(90deg, rgba(207,241,181,1) 0%, rgba(173,206,132,1) 46%, rgba(207,241,181,1) 95%);
+}
 li {
   margin: 20px;
 }
 h2 {
-  color: #8c705a;
+  color: rgba(88,91,136,0.8);
   font-family: "New Amsterdam", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 i {
   font-size: xx-large;
-  color: #387838;
+  color: rgba(88,91,136);
 }
 .icon {
   font-size: 100px;

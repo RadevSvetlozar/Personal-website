@@ -79,11 +79,9 @@ const clickOnItem = (text) => {
   <v-card
     id="certificates"
     elevation="15"
-    color="#CDF7CD"
+    
     rounded="14"
-    height="100vh"
-      max-height="700px"
-    class="main mt-3 mb-3"
+    class="main mt-3 mb-3 "
   >
     <v-icon
       class="icon"
@@ -91,8 +89,8 @@ const clickOnItem = (text) => {
       >mdi-folder-text-outline</v-icon
     >
     <v-row>
-      <v-col cols="6">
-        <v-card elevation="24" class="ma-10" rounded>
+      <v-col cols="12" md="6">
+        <v-card elevation="24" class="ma-3" rounded>
           <v-list density="compact" color="red">
             <v-list-header><h1 class="ma-2">Certificates</h1></v-list-header>
             <v-list-item
@@ -110,7 +108,7 @@ const clickOnItem = (text) => {
             </v-list-item>
           </v-list>
         </v-card>
-        <v-card elevation="24" class="ma-10" rounded>
+        <v-card elevation="24" class="ma-3" rounded>
           <v-list density="compact">
             <v-list-header><h1 class="ma-2">Cources</h1></v-list-header>
             <v-list-item
@@ -128,8 +126,8 @@ const clickOnItem = (text) => {
           </v-list>
         </v-card>
       </v-col>
-      <v-col cols="6">
-        <div class="img-container ma-10">
+      <v-col cols="12" md="6" class="d-flex justify-start align-center">
+        <div class="img-container">
           <v-card
             v-for="(certificate, i) in certificates"
             :key="i"
@@ -138,10 +136,7 @@ const clickOnItem = (text) => {
             :style="{ left: i * 20 + 'px', top: i * 20 + 'px' }"
             :id="certificate.text"
           >
-            <v-img
-              :src="getImgUrl(certificate.link)"
-              cover
-            ></v-img>
+            <v-img :src="getImgUrl(certificate.link)" cover></v-img>
           </v-card>
         </div>
       </v-col>
@@ -149,15 +144,22 @@ const clickOnItem = (text) => {
   </v-card>
 </template>
 <style scoped>
+.main{
+  background: rgb(207,241,181);
+  background: linear-gradient(90deg, rgba(207,241,181,1) 0%, rgba(173,206,132,1) 46%, rgba(207,241,181,1) 95%);
+}
 .img-container {
   position: relative;
+
   width: 300px;
-  height: 800px;
+  margin-right: 20%;
+  height:550px;
+;
 }
 .img {
   position: absolute;
-  height: 500px;
-  width: 350px;
+  height: auto;
+  width: 60%;
 }
 .img:hover {
   z-index: 15;

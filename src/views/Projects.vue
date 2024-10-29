@@ -4,17 +4,13 @@ import shopping from "../assets/shopping-list-app.png"; // => or relative path
 const getImage = (link) => {
   return new URL(link, import.meta.url).href;
 };
+const openLink = (link) => {
+  window.open(link, '_blank');
+}
 </script>
 
 <template>
-  <v-card
-    id="projects"
-    elevation="15"
-    rounded="14"
-    height="auto"
-    max-height="700px"
-    class="main mt-3 mb-3"
-  >
+  <v-card id="projects" elevation="15" rounded="14" class="main mt-3 mb-3">
     <v-icon
       class="icon"
       style="left: 40%; bottom: 40%; transform: rotate(0.05turn)"
@@ -115,7 +111,7 @@ const getImage = (link) => {
         vertical
       ></v-divider>
       <v-col cols="5">
-        <v-card elevation="24" class="ma-10" height="auto">
+        <v-card @click="openLink('https://svetlozarr.sg-host.com/')" elevation="24" class="ma-10" height="100%">
           <v-img cover :src="shopping" />
         </v-card>
       </v-col>

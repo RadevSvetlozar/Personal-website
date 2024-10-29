@@ -14,9 +14,9 @@ import Certificates from "./views/Certificates.vue";
       <Header></Header>
       <Main></Main>
       <Education></Education>
-      <Quantities></Quantities>
-      <Certificates></Certificates>
-      <Projects></Projects>
+      <Quantities></Quantities> 
+      <Certificates></Certificates> 
+       <!-- <Projects></Projects> -->
       <Footer></Footer>
     </div>
   </v-app>

@@ -6,19 +6,18 @@
       elevation="23"
       color="transparent"
       style="margin: auto"
-      width="800px"
-        max-height="700px"
-      height="100vh"
+      width="100%"
+      
     >
       <svg width="100%" height="850px">
-        <line x1="280" y1="50" x2="550" y2="100" stroke="black" />
-        <line x1="450" y1="350" x2="550" y2="100" stroke="black" />
-        <line x1="300" y1="280" x2="450" y2="300" stroke="black" />
-        <line x1="100" y1="350" x2="250" y2="250" stroke="black" />
-        <line x1="100" y1="350" x2="450" y2="450" stroke="black" />
-        <line x1="700" y1="500" x2="450" y2="480" stroke="black" />
-        <line x1="700" y1="500" x2="500" y2="680" stroke="black" />
-        <line x1="220" y1="680" x2="500" y2="680" stroke="black" />
+        <line x1="23%" y1="5%" x2="70%" y2="100" stroke="black" />
+        <line x1="75%" y1="260" x2="75%" y2="100" stroke="black" />
+        <line x1="40%" y1="200" x2="80%" y2="300" stroke="black" />
+        <line x1="20%" y1="350" x2="40%" y2="250" stroke="black" />
+        <line x1="20%" y1="350" x2="70%" y2="450" stroke="black" />
+        <line x1="25%" y1="520" x2="60%" y2="480" stroke="black" />
+        <line x1="25%" y1="500" x2="74%" y2="610" stroke="black" />
+        <line x1="25%" y1="750" x2="74%" y2="630" stroke="black" />
       </svg>
 
       <span class="dot born">
@@ -73,7 +72,7 @@
         <v-icon color="cyan">mdi-google-chrome</v-icon>
         <h4>2022</h4>
       </span>
-      <span class="dot now">
+      <span class="dot now mb-10">
         <h3>Full-Stack</h3>
         <h3>Dev</h3>
         <v-icon color="orange">mdi-xml</v-icon>
@@ -132,27 +131,27 @@
 }
 .now {
   top: 650px;
-  left: 150px;
+  left: 13%;
   height: 180px;
   width: 180px;
 }
 .end {
-  top: 590px;
-  left: 480px;
-  height: 160px;
-  width: 160px;
+  top: 550px;
+  left: 60%;
+  height: 140px;
+  width: 140px;
 }
 .back {
-  top: 450px;
-  left: 650px;
+  top: 470px;
+  left: 20%;
   height: 140px;
   width: 140px;
 }
 .master {
-  top: 410px;
-  left: 350px;
-  height: 160px;
-  width: 160px;
+  top: 370px;
+  left: 55%;
+  height: 130px;
+  width: 130px;
 }
 .substation {
   top: 300px;
@@ -161,26 +160,26 @@
   width: 140px;
 }
 .electrican {
-  top: 200px;
-  left: 200px;
+  top: 150px;
+  left: 30%;
   height: 120px;
   width: 120px;
 }
 .average {
   top: 240px;
-  left: 400px;
+  left: 65%;
   height: 120px;
   width: 120px;
 }
 .basic {
   top: 70px;
-  left: 500px;
+  left: 65%;
   height: 120px;
   width: 120px;
 }
 .born {
   top: 20px;
-  left: 200px;
+  left: 20%;
   height: 100px;
   width: 100px;
 }
