@@ -32,7 +32,7 @@
       <v-row>
         <v-col cols="12" md="6" class="d-flex justify-center align-center">
           <div>
-            <h2 class="ml-10">Quantities</h2>
+            <h2 class="ml-10">Qualities</h2>
             <ul>
               <li class="d-flex">
                 <v-icon> mdi-alert</v-icon>

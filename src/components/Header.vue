@@ -31,7 +31,7 @@ const drawer = ref(false);
       <h1 class="ml-15" innerText="<> </>"></h1>
       <v-spacer></v-spacer>
       <v-btn @click="goTo('#education', options)"><h2>Education</h2></v-btn>
-      <v-btn @click="goTo('#quantities', options)"><h2>Quantities</h2> </v-btn>
+      <v-btn @click="goTo('#quantities', options)"><h2>Qualities</h2> </v-btn>
       <v-btn @click="goTo('#certificates', options)"
         ><h2>Certificates</h2></v-btn
       >
@@ -67,14 +67,14 @@ const drawer = ref(false);
           ><h2>Education</h2></v-btn
         >
         <v-btn width="100%" class="mt-4" @click="goTo('#quantities', options)"
-          ><h2>Quantities</h2>
+          ><h2>Qualities</h2>
         </v-btn>
         <v-btn width="100%" class="mt-4" @click="goTo('#certificates', options)"
           ><h2>Certificates</h2></v-btn
         >
-        <v-btn width="100%" class="mt-4" @click="goTo('#projects', options)"
+        <!-- <v-btn width="100%" class="mt-4" @click="goTo('#projects', options)"
           ><h2>Projects</h2></v-btn
-        >
+        > -->
         <v-btn
           width="100%"
           class="mt-4"

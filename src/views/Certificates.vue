@@ -1,5 +1,6 @@
 <script setup>
-import { reactive, ref } from "vue";
+import { reactive, ref, computed } from "vue";
+import { useGoTo } from "vuetify";
 const certificates = reactive([
   {
     text: "Programming Basics with C# - October 2019",
@@ -66,6 +67,7 @@ const getImgUrl = (imageNameWithExtension) =>
   new URL(`../assets/${imageNameWithExtension}`, import.meta.url).href;
 const selectedCertificateLink = ref(certificates[0].link);
 const clickOnItem = (text) => {
+  goTo("#imgCont", options);
   for (const certificate of certificates) {
     if (certificate.text !== text) {
       document.getElementById(certificate.text).style.zIndex = "1";
@@ -74,15 +76,20 @@ const clickOnItem = (text) => {
     }
   }
 };
+
+const goTo = useGoTo();
+
+const options = computed(() => {
+  return {
+    container: "#goto-container-example",
+    duration: 100,
+    easing: "easeInOutCubic",
+    offset: 0,
+  };
+});
 </script>
 <template>
-  <v-card
-    id="certificates"
-    elevation="15"
-    
-    rounded="14"
-    class="main mt-3 mb-3 "
-  >
+  <v-card id="certificates" elevation="15" rounded="14" class="main mt-3 mb-3">
     <v-icon
       class="icon"
       style="left: 510px; bottom: 150px; transform: rotate(0.05turn)"
@@ -127,7 +134,7 @@ const clickOnItem = (text) => {
         </v-card>
       </v-col>
       <v-col cols="12" md="6" class="d-flex justify-start align-center">
-        <div class="img-container">
+        <div id="imgCont" class="img-container">
           <v-card
             v-for="(certificate, i) in certificates"
             :key="i"
@@ -144,17 +151,21 @@ const clickOnItem = (text) => {
   </v-card>
 </template>
 <style scoped>
-.main{
-  background: rgb(207,241,181);
-  background: linear-gradient(90deg, rgba(207,241,181,1) 0%, rgba(173,206,132,1) 46%, rgba(207,241,181,1) 95%);
+.main {
+  background: rgb(207, 241, 181);
+  background: linear-gradient(
+    90deg,
+    rgba(207, 241, 181, 1) 0%,
+    rgba(173, 206, 132, 1) 46%,
+    rgba(207, 241, 181, 1) 95%
+  );
 }
 .img-container {
   position: relative;
 
   width: 300px;
   margin-right: 20%;
-  height:550px;
-;
+  height: 550px;
 }
 .img {
   position: absolute;

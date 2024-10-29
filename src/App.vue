@@ -3,7 +3,7 @@ import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Main from "./views/Main.vue";
 import Education from "./views/Education.vue";
-import Quantities from "./views/Quantities.vue";
+import Qualities from "./views/Qualities.vue";
 import Projects from "./views/Projects.vue";
 import Certificates from "./views/Certificates.vue";
 </script>
@@ -14,7 +14,7 @@ import Certificates from "./views/Certificates.vue";
       <Header></Header>
       <Main></Main>
       <Education></Education>
-      <Quantities></Quantities> 
+      <Qualities></Qualities> 
       <Certificates></Certificates> 
        <!-- <Projects></Projects> -->
       <Footer></Footer>
